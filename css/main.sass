@@ -1,0 +1,240 @@
+body
+
+  margin: 0 auto
+  width: 100%
+  font-family: 'Roboto Mono', monospace
+  color: #626262
+  font-weight: 500
+  -webkit-font-smoothing: antialiased
+  font-smoothing: antialiased
+  font-size: 16px
+  line-height: 24px
+#work
+  min-height: calc(100vh - 44px)
+  max-width: 1170px
+  margin: 0 auto
+.title
+  position: relative
+  text-align: center
+  margin-bottom: 60px
+  margin-top: 70px
+  text-transform: uppercase
+  font-size: 30px
+  font-family: 'Raleway', sans-serif
+  font-weight: 700
+.portfolio-filter
+  text-align: center
+  margin-bottom: 50px
+  li
+    display: inline-block
+    padding: 0 8px
+    a
+      line-height: inherit
+      color: #00ACC1
+      text-decoration: none
+      -webkit-transition: all 0.3s ease-in
+      -moz-transition: all 0.3s ease-in
+      -o-transition: all 0.3s ease-in
+      transition: all 0.3s ease-in
+      padding-bottom: 7px
+      color: #263238
+      border-bottom: 1px solid #263238
+      &.active
+        color: #00ACC1
+        border-bottom-color: #00ACC1
+
+.grid-sizer,.grid-item
+  width: 32%
+  float: left
+  margin: 0.6%
+  margin-bottom: 10px
+
+  img
+    width: 100%
+/* 2 columns */
+.grid-item--width2
+  width: 40%
+
+
+
+
+.grid-item-content
+  width:  100%
+  height: 100%
+  background: #09D
+  transition: width 0.4s, height 0.4s
+
+/* item has expanded size */
+.grid-item.is-expanded
+  width: 60%
+  height: 120px
+
+.ss
+  color: #00ACC1!important
+  border-bottom-color: #00ACC1!important
+
+
+.trumb
+  position: relative
+  overflow: hidden
+.overlay
+  position: absolute
+  bottom: 0
+  left: 0
+  border-radius: 100%
+  background-color: #00ACC1
+  -webkit-transform: scale(0)
+  -moz-transform: scale(0)
+  -o-transform: scale(0)
+  transform: scale(0)
+  -webkit-transition: all 0.6s linear
+  -moz-transition: all 0.6s linear
+  -o-transition: all 0.6s linear
+  transition: all 0.6s linear
+.trumb
+  &:hover
+    .overlay
+      opacity: 0.7
+      width: 100px
+      height: 100px
+      -webkit-transform: scale(12)
+      -moz-transform: scale(12)
+      -o-transform: scale(12)
+      transform: scale(12)
+    .meta
+      opacity: 1
+.meta
+  display: block
+  position: absolute
+  z-index: 1
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  opacity: 0
+  -webkit-backface-visibility: hidden
+  -moz-backface-visibility: hidden
+  -o-backface-visibility: hidden
+  backface-visibility: hidden
+  -webkit-transition: opacity .3s 0.2s
+  -moz-transition: opacity .3s 0.2s
+  -o-transition: opacity .3s 0.2s
+  transition: opacity .3s 0.2s
+  .inner
+    position: absolute
+    width: 100%
+    height: 120px
+    color: #fff
+    text-align: center
+    left: 0
+    top: 0
+    right: 0
+    margin-top: 0
+    padding: 0
+    bottom: 0
+    margin: auto
+
+    .btns
+      display: flex
+      display: -webkit-flex
+      justify-content: center
+      -webkit-justify-content: center
+      align-items: center
+      -webkit-align-items: center
+      height: 100%
+      padding: 0
+      margin: 0
+      a
+        display: inline-block
+        text-decoration: none
+        line-height: 41px
+        font-size: 22px
+        padding: 0 15px
+        color: #fafafe
+        background-color: transparent
+        border: 2px solid #fafafe
+        margin: 0 -2px
+        -webkit-transform: translate(-20px,0)
+        -moz-transform: translate(-20px,0)
+        -o-transform: translate(-20px,0)
+        transform: translate(-20px,0)
+        -webkit-transition: all .3s
+        -moz-transition: all .3s
+        -o-transition: all .3s
+        transition: all .3s 0.2s
+
+.grid-item
+  img
+    cursor: pointer
+
+.photo
+  width: 135px
+  border-radius: 96px
+  height: 100%
+.photo_text
+  display: flex
+  display: -webkit-flex
+  justify-content: center
+  -webkit-justify-content: center
+  align-items: center
+  -webkit-align-items: center
+  margin-top: 50px
+  h1
+    font-size: 32px
+    margin-top: 0
+  h2
+    font-size: 24px
+
+
+.text_dev
+  display: flex
+  flex-direction: column
+  margin-left: 20px
+
+
+footer
+
+
+  p
+    color: #000
+    text-align: left
+    font-size: 14px
+    margin: 10px 0
+    font-weight: normal
+
+@media (max-width: 992px)
+  .grid-sizer, .grid-item
+    width: 48.5%
+@media (max-width: 767px)
+  .grid,footer
+    width: 90%
+    margin: 0 auto
+  .grid-sizer, .grid-item
+    width: 48.5%
+
+
+
+@media (max-width: 620px)
+  .grid
+    width: 100%
+  .grid-sizer, .grid-item
+    width: 80%
+  .grid-item
+    right: 0
+    margin: auto
+    float: none
+    text-align: center
+    margin-bottom: 20px
+  .portfolio-filter li
+    display: block
+    padding: 0 8px
+
+    text-align: left
+    width: 80%
+    margin: 0 auto
+    margin-bottom: 25px
+  footer
+    p
+      text-align: center
+
+
