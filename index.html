@@ -196,8 +196,7 @@
 
 </section>
 <footer>
-    <p class="container">© 2017 GolovniaGalyna.com | All Rights Reserved
-    <p>
+    <p class="container">©2017 GolovniaGalyna.com <span class="line">|</span><span class="all_rights">All Rights Reserved</span></p>
 </footer>
 
 
@@ -208,70 +207,6 @@
 <script src="js/imagesloaded.pkgd.js"></script>
 <script src="js/isotope.pkgd.min.js"></script>
 
-<script>
-    $(document).ready(function () {
-        console.log("ready!");
-
-
-        var $grid = $('.grid').masonry({
-
-            itemSelector: '.grid-item',
-            // use element for option
-            columnWidth: '.grid-item',
-            percentPosition: true
-        });
-// layout Masonry after each image loads
-        $grid.imagesLoaded().progress(function () {
-            $grid.masonry('layout');
-        });
-// layout Masonry after each image loads
-
-        /* var $grid = $('.grid').isotope({
-         itemSelector: '.grid-item',
-
-         getSortData: {
-         name: '.name',
-         symbol: '.symbol',
-         number: '.number parseInt',
-         category: '[data-category]',
-         weight: function( itemElem ) {
-         var weight = $( itemElem ).find('.weight').text();
-         return parseFloat( weight.replace( /[\(\)]/g, '') );
-         }
-         }
-         });
-         */
-
-
-// filter functions
-        var filterFns = {
-            // show if number is greater than 50
-            numberGreaterThan50: function () {
-                var number = $(this).find('.number').text();
-                return parseInt(number, 10) > 50;
-            },
-            // show if name ends with -ium
-            ium: function () {
-                var name = $(this).find('.name').text();
-                return name.match(/ium$/);
-            }
-        };
-
-// bind filter button click
-        $('#filters').on('click', 'a', function () {
-            var link_a = $(this);
-            $('#filters li a').removeClass("active");
-            link_a.addClass("active");
-            var filterValue = $(this).attr('data-filter');
-            // use filterFn if matches value
-            filterValue = filterFns[filterValue] || filterValue;
-            $grid.isotope({filter: filterValue});
-        });
-
-
-    });
-
-
-</script>
+<script src="js/main.js"></script>
 
 </html>
